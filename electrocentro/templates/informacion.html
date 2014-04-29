@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Electrocentro S. A.</title>
+	<link rel="stylesheet"  type='text/css' href="{{STATIC_URL}}css/bootstrap.css">
+</head>
+<body>
+	
+	<div class="container">
+		{% for valor in info %}
+		<div class="row">
+			
+			<div class="col-xs-12">
+				<h2 class='text-center'><strong>Titulo :</strong> {{ valor.Titulo}}</h2>
+				<p class='text-center'>{{ valor.Descripcion }}</p>
+				<br>
+			</div>
+					
+		</div>
+		<div class="row">
+				<div class="col-xs-8 col-xs-offset-2">
+					<img class='img-rounded img-responsive' src="{{MEDIA_URL}}{{valor.imagen2}}" alt="">
+					<br>
+				</div>
+				
+				<div class="col-xs-8 col-xs-offset-2">
+					<img class='img-rounded img-responsive' src="{{MEDIA_URL}}{{valor.imagen1}}" alt="">
+				</div>
+	
+		</div>
+		<br><br>
+
+		<div class="row">
+			<div class="12">
+				<p class='text-center'>{{valor.Direccion}}</p>
+				<br><br>
+			</div>
+		</div>			
+					
+		{%endfor%}		
+	</div>
+	
+	
+
+
+	
+</body>
+</html>
